@@ -90,6 +90,8 @@ function startGame() {
         ];
 
         for (let i = 0; i < coordinates.length; i++) {
+
+            //всегда нужно помнить что число нельзя сравнивать со строкой
             if (coordinates[i][1] === "1" || document.querySelector(`[posX = "${coordinates[i][0]}"][posY = "${coordinates[i][1] - 1}"]`).classList.contains('set')) {
                 moveFlag = false;
                 break;
